@@ -1,10 +1,12 @@
 [package]
 name = "float_to_int"
-description = "Conversions of integer-value floats into floats"
+description = "Conversions of integer-value floats into integers"
 version = "0.1.0"
 edition = "2021"
 license = "MIT"
-
+repository = "https://github.com/Aandreba/float_to_int"
+keywords = ["float", "int", "integer", "conversion", "convert"]
+categories = ["algorithms", "encoding", "no-std", "rust-patterns"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [features]
