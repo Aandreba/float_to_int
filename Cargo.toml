@@ -1,0 +1,28 @@
+[package]
+name = "float_to_int"
+description = "Conversions of integer-value floats into floats"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[features]
+default = ["std"]
+std = ["half?/std", "num-traits?/std"]
+half = ["dep:half", "dep:num-traits"]
+nightly = ["half?/use-intrinsics"]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[dependencies]
+cfg-if = "1.0.0"
+half = { version = "2.1.0", default-features = false, features = ["num-traits"], optional = true }
+num-traits = { version = "0.2.15", default-features = false, optional = true }
+
+[dev-dependencies]
+num-traits = "0.2.15"
+rand = "0.8.5"
+half = { features = ["num-traits"] }
